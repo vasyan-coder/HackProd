@@ -12,4 +12,14 @@ spring:
     user: admin
     password: root
 
+jwt:
+  password:
+    encoder:
+      secret: FZk2DZ820dqS13e8aENggaMbb_fAk1-nJL4AEVBX43g
+      iteration: 64
+      keylength: 256
+
+  secret: b5f59337a612a2a7dc07328f3e7d1a04722967c7f@6df20a499a7d3f91ff2a7e
+  expiration: 3600
+  issuer: proselyte
 
