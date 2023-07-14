@@ -1,0 +1,13 @@
+package com.vasyancoder.HackProd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HackProdApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HackProdApplication.class, args);
+	}
+
+}

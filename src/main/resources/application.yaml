@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/db_hackprod_auth
+    username: admin
+    password: root
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    locations: classpath:db/migration
+    user: admin
+    password: root
+
+
