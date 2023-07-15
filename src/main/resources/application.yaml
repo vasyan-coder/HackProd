@@ -3,7 +3,7 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:pool:postgresql://localhost:5432/db_hackprod_auth
+    url: r2dbc:pool:postgresql://localhost:5432/postgres
     username: admin
     password: root
   flyway:

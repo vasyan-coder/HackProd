@@ -2,7 +2,7 @@ package com.vasyancoder.HackProd.security;
 
 import com.vasyancoder.HackProd.entity.UserEntity;
 import com.vasyancoder.HackProd.exception.AuthException;
-import com.vasyancoder.HackProd.repository.UserRepository;
+import com.vasyancoder.HackProd.service.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.*;
 @RequiredArgsConstructor
 public class SecurityService {
 
-    private final UserRepository userRepository;
+    private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 
     @Value("${jwt.secret}")
@@ -62,7 +62,7 @@ public class SecurityService {
     }
 
     public Mono<TokenDetails> authenticate(String username, String password) {
-        return userRepository.findByUsername(username)
+        return userService.getUserByUsername(username)
                 .flatMap(user -> {
                     if (!user.isEnabled()) {
                         return Mono.error(new AuthException("Account disabled", "PROSELYTE_USER_ACCOUNT_DISABLE"));
