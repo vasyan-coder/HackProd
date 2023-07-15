@@ -21,7 +21,7 @@ public class UserEntity {
     private String lastName;
     private boolean enabled;
     private LocalDateTime createdAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     @ToString.Include(name = "password")
     private String maskPassword() {

@@ -2,7 +2,6 @@ package com.vasyancoder.HackProd.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.vasyancoder.HackProd.entity.UserRole;
 import lombok.Data;
@@ -21,5 +20,5 @@ public class UserDto {
     private String lastName;
     private boolean enabled;
     private LocalDateTime createdAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 }
