@@ -68,7 +68,7 @@ public class SecurityService {
                         return Mono.error(new AuthException("Account disabled", "PROSELYTE_USER_ACCOUNT_DISABLE"));
                     }
 
-                    if (passwordEncoder.matches(password, user.getPassword())) {
+                    if (!passwordEncoder.matches(password, user.getPassword())) {
                         return Mono.error(new AuthException("Invalid password", "PROSELYTE_INVALID_PASSWORD"));
                     }
 
